@@ -1,16 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import Papa from "papaparse";
+import dangerous from "./dangerous.csv"; 
 
 
 function App() {
   const [website, setWebsite] = useState('www.google.com');
   const [websiteSafety, setSafety] = useState(0); // scale from 0-100 or something
   const [resultstyle, setstyle] = useState("color: 'red', fontSize: 40, textAlign:'center'" );
+  const [dangerousCSV, setDangerous] = useState(null);
+
+  useEffect(() => {
+    Papa.parse(dangerous, {
+      download: true,
+      complete: function(results){
+        setDangerous(results.data); // dangerousCSV = an array of arrays, dangerousCSV[index][0]
+        console.log(dangerousCSV);
+      }
+    })
+  }, []); // [] means that this useEffect will not repeat
+
   const displayInfo = () => {
-    // use website state to read csv file and get the info
-    // set the websiteSafety state with that value
-    // setSafety()
+    // check 'website' against all elements in 'dangerousCSV'
+      // map or a loop
+    // based on that result, do 'setSafety' 0-10
+    // based on 'websitesafety', change the styling
   }
 
   const handleSubmit = (evt) => {
