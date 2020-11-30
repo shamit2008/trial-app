@@ -9,7 +9,7 @@ import half from "./half.csv";
 function App() {
   const [website, setWebsite] = useState('www.google.com');
   const [displayName, setDisplay] = useState('www.google.com');
-  const [websiteSafety, setSafety] = useState(0); // scale from 0-100 or something
+  const [websiteDanger, setDanger] = useState(0); // scale from 0-100 or something
   const [resultStyle, setstyle] = useState({color: 'green', fontSize: 40, textAlign:'center'});
   const [dangerousCSV, setDangerous] = useState(null);
   const [halfCSV, setHalf] = useState(null);
@@ -40,14 +40,14 @@ function App() {
     
     dangerousCSV.map((dWebsite) => {
       if (dWebsite[0] === website){
-        setSafety(10);
+        setDanger(10);
         websiteFound = true;
       }
     });
 
     halfCSV.map((hWebsite) =>{
       if (hWebsite[0] === website){
-        setSafety(5);
+        setDanger(5);
         websiteFound = true;
       }    
     });
@@ -55,16 +55,21 @@ function App() {
     if (!websiteFound){
       
 
-      setSafety(-1);
+      setDanger(0);
     }
+    
+    
+    let isolatedWebsite = (website.substring(4, website.length-4));
+    console.log(isolatedWebsite);
+    console.log(website);
 
-    if (websiteSafety === 0){
+    if (websiteDanger === 0){
       setstyle({color: 'green', fontSize: 40, textAlign:'center'});
     }
-    else if (websiteSafety === 5){
+    else if (websiteDanger === 5){
       setstyle({color: 'blue', fontSize: 40, textAlign:'center'});
     }
-    else if (websiteSafety === 10 || websiteSafety === -1){
+    else if (websiteDanger === 10 || websiteDanger === -1){
       setstyle({color: 'red', fontSize: 40, textAlign:'center'});
     }
   }
@@ -93,7 +98,7 @@ function App() {
           <input type="submit" value="Submit" />
         </form>
 
-        <p style={resultStyle}>{displayName}'s safety score: {websiteSafety}</p> {/* style this is css */}
+        <p style={resultStyle}>{displayName}'s danger score: {websiteDanger}</p> {/* style this is css */}
       </header>
     </div>
   );
