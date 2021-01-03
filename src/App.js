@@ -8,7 +8,7 @@ import {
   Route,
   Switch,
   Link
-} from 'react-router-dom';
+} from 'react-router-dom'; 
 /*
   enter website page
   how it works
