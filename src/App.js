@@ -21,7 +21,7 @@ function App() {
       <Router>
         <div>
           {/* navigation bar start */}
-          <ul>
+          <ul id="headerBar">
             <li>
               <Link to="/">Checker</Link>
             </li>
@@ -62,7 +62,9 @@ function App() {
 export default App;
 // hw:
   // 1. Fill in the Info and Contact modules
+    // if you want a button to show text: 
   // 2. Style the navigation bar (add classes to ul, li, Link => App.css and style)
 
 // Later:
   // add in all the data for Checker
+  // link to external email

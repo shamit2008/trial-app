@@ -6,8 +6,8 @@ import half from "./half.csv";
 function Checker() {
   const [website, setWebsite] = useState('www.google.com');
   const [displayName, setDisplay] = useState('www.google.com');
-  const [websiteDanger, setDanger] = useState(0); // scale from 0-100 or something
-  const [resultStyle, setstyle] = useState({color: 'green', fontSize: 40, textAlign:'center'});
+  const [websiteDanger, setDanger] = useState(5); // scale from 0-100 or something
+  const [resultStyle, setstyle] = useState({color: 'blue', fontSize: 40, textAlign:'center'});
   const [dangerousCSV, setDangerous] = useState(null);
   const [halfCSV, setHalf] = useState(null);
 
@@ -32,12 +32,14 @@ function Checker() {
     setDisplay(website);
     // check which array website is in
     let websiteFound = false;
+    let temp = setDanger;
 
     
     
     dangerousCSV.map((dWebsite) => {
       if (dWebsite[0] === website){
         setDanger(10);
+        temp = 10;
         websiteFound = true;
       }
     });
@@ -45,13 +47,14 @@ function Checker() {
     halfCSV.map((hWebsite) =>{
       if (hWebsite[0] === website){
         setDanger(5);
+        temp = 5;
         websiteFound = true;
       }    
     });
 
     if (!websiteFound){
       
-
+      temp = 0;
       setDanger(0);
     }
     
@@ -60,13 +63,13 @@ function Checker() {
     console.log(isolatedWebsite);
     console.log(website);
 
-    if (websiteDanger === 0){
+    if (temp === 0){
       setstyle({color: 'green', fontSize: 40, textAlign:'center'});
     }
-    else if (websiteDanger === 5){
+    else if (temp === 5){
       setstyle({color: 'blue', fontSize: 40, textAlign:'center'});
     }
-    else if (websiteDanger === 10 || websiteDanger === -1){
+    else if (temp === 10 || temp === -1){
       setstyle({color: 'red', fontSize: 40, textAlign:'center'});
     }
   }
@@ -97,11 +100,14 @@ function Checker() {
           <input type="submit" value="Submit" />
         </form>
 
-        <p style={resultStyle}>{displayName}'s danger score: {websiteDanger}</p> {/* style this is css */}
+        <p style={resultStyle}>{displayName} is {websiteDanger === 0 ? "Safe" : websiteDanger === 5 ? "Semi Dangerous" : "Dangerous"}</p> {/* style this is css */}
       </header>
     </div>
   );
 }
 
+/*
+  condition ? (what happens if true) : (what happens if false)
+*/
 
 export default Checker;

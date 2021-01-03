@@ -10,10 +10,8 @@ function Contact() {
           
         </a>
         <h3>Contact Us</h3>
-       
-        <Link to="/mail">Click Me</Link>
-        <p> Hi </p>
-        <p>Contact us for more info</p>
+        
+        <p>To report a problem with this app or its classifications, please contact us at <a src = "mailto:shauryamittal5@gmail.com">shauryamittal5@gmail.com</a></p>
       </header>
     </div>
   );
