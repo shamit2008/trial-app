@@ -10,9 +10,11 @@ import {
   Link
 } from 'react-router-dom'; 
 /*
-  enter website page
-  how it works
-  Contact Us
+  changes you want for sure on your website, PUSH TO GITHUB
+  github will rebuild the website from there
+
+  make sure you save your MIT app
+  - show the early progression of the website
 */
 
 function App() {
