@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/webSecurityScanner/static/css/main.0398d581.chunk.css",
+    "main.js": "/webSecurityScanner/static/js/main.36bad7e0.chunk.js",
+    "main.js.map": "/webSecurityScanner/static/js/main.36bad7e0.chunk.js.map",
+    "runtime-main.js": "/webSecurityScanner/static/js/runtime-main.8af5f866.js",
+    "runtime-main.js.map": "/webSecurityScanner/static/js/runtime-main.8af5f866.js.map",
+    "static/js/2.28300437.chunk.js": "/webSecurityScanner/static/js/2.28300437.chunk.js",
+    "static/js/2.28300437.chunk.js.map": "/webSecurityScanner/static/js/2.28300437.chunk.js.map",
+    "static/js/3.9f17a41d.chunk.js": "/webSecurityScanner/static/js/3.9f17a41d.chunk.js",
+    "static/js/3.9f17a41d.chunk.js.map": "/webSecurityScanner/static/js/3.9f17a41d.chunk.js.map",
+    "index.html": "/webSecurityScanner/index.html",
+    "static/css/main.0398d581.chunk.css.map": "/webSecurityScanner/static/css/main.0398d581.chunk.css.map",
+    "static/js/2.28300437.chunk.js.LICENSE.txt": "/webSecurityScanner/static/js/2.28300437.chunk.js.LICENSE.txt",
+    "static/media/dangerous.317ececd.csv": "/webSecurityScanner/static/media/dangerous.317ececd.csv",
+    "static/media/half.5dedced7.csv": "/webSecurityScanner/static/media/half.5dedced7.csv"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8af5f866.js",
+    "static/js/2.28300437.chunk.js",
+    "static/css/main.0398d581.chunk.css",
+    "static/js/main.36bad7e0.chunk.js"
+  ]
+}
