@@ -2,7 +2,7 @@
   "name": "react-trial",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shamit2008.github.io/webSecurityScanner/src/app.js",
+  "homepage": "https://shamit2008.github.io/webSecurityScanner/src/App.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
